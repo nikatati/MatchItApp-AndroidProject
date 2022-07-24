@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditFragment">
+
+    <ImageView
+        android:id="@+id/teacherEdit_avatar_img"
+        android:layout_width="308dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avatar" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teacherEdit_avatar_img">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_email_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="location">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_location_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_password_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_phone_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <Button
+        android:id="@+id/logout_editF"
+        android:layout_width="115dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:text="LogOut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+
+
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="113dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="164dp"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="@+id/delete_btn"
+        app:layout_constraintStart_toStartOf="@+id/logout_editF"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="144dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:text="DELETE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+    <ImageButton
+        android:id="@+id/main_camera_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu_camera"
+        app:layout_constraintBottom_toBottomOf="@+id/teacherEdit_avatar_img"
+        app:layout_constraintEnd_toEndOf="@+id/teacherEdit_avatar_img" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
